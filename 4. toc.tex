@@ -1,0 +1,54 @@
+% 기본 레이아웃 설정 
+\newcommand{\listspacing}{1mm}
+\newcommand{\listdefaultfontsize}{11pt}
+\newcommand{\chapfontsize}{\fontsize{\listdefaultfontsize}{\listdefaultfontsize}\selectfont\bfseries}
+\newcommand{\secfontsize}{\fontsize{\listdefaultfontsize}{\listdefaultfontsize}\selectfont}
+\newcommand{\subsecfontsize}{\fontsize{\listdefaultfontsize}{\listdefaultfontsize}\selectfont}
+\newcommand{\figfontsize}{\fontsize{\listdefaultfontsize}{\listdefaultfontsize}\selectfont}
+\newcommand{\tabfontsize}{\fontsize{\listdefaultfontsize}{\listdefaultfontsize}\selectfont}
+
+\renewcommand{\cftchappresnum}{Chapter }
+\renewcommand{\cftchapaftersnum}{.}
+\renewcommand{\cftchapnumwidth}{5em}
+\renewcommand{\cftbeforechapskip}{\listspacing}
+\renewcommand{\cftchapfont}{\chapfontsize}
+
+\renewcommand{\cftbeforesecskip}{\listspacing}
+\renewcommand{\cftsecfont}{\secfontsize}
+
+\renewcommand{\cftbeforesubsecskip}{\listspacing}
+\renewcommand{\cftsubsecfont}{\subsecfontsize}
+
+\renewcommand{\cftbeforefigskip}{\listspacing}
+\renewcommand{\cftfigfont}{\figfontsize}
+
+\renewcommand{\cftbeforetabskip}{\listspacing}
+\renewcommand{\cfttabfont}{\tabfontsize}
+
+% 연도, 학과에 맞게 수정
+
+% 목차 제목 , 가운데 정렬
+\setlength{\cftaftertoctitleskip}{16pt}
+\renewcommand{\cfttoctitlefont}{\fontsize{16pt}{16pt}\selectfont\bfseries}
+\renewcommand{\contentsname}{\hfill{}Table of Contents\hfill}
+\renewcommand{\cftaftertoctitle}{\hfill\newline}
+
+
+% 목차 생성 (toc)
+\tableofcontents
+
+% 새로운 페이지로 이동
+\clearpage
+
+% 그림 목차 , 가운데 정렬
+\renewcommand{\cftloftitlefont}{\fontsize{16pt}{16pt}\selectfont\bfseries}
+\renewcommand{\listfigurename}{\hfill List of Figures \hfill}
+\listoffigures
+
+% 새로운 페이지로 이동
+\clearpage
+
+% 표 목차 , 가운데 정렬
+\renewcommand{\cftlottitlefont}{\fontsize{16pt}{16pt}\selectfont\bfseries}
+\renewcommand{\listtablename}{\hfill List of  Tables \hfill}
+\listoftables

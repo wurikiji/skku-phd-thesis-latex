@@ -1,0 +1,82 @@
+% 심사위원 추가 커맨드 
+\newcommand{\judgesign}[1]{
+    \vbox to 9.7mm {
+        \setstretch{1.5}
+        \setlength{\parskip}{3.6pt}
+        \fontsize{12pt}{12pt}\selectfont
+        \vspace{0.5mm}
+        \vfill
+        \hspace{60.5mm}
+        \hfill{}\textcolor{lightgray}{#1 signature}\hfill{}\hfill{}
+        \hspace{7.8mm}
+        \vfill
+        \vspace{0.5mm}
+    }
+}
+
+\newcommand{\judgename}[2]{
+    \vbox to 9.7mm {
+        \setstretch{1.5}
+        \setlength{\parskip}{3.6pt}
+        \fontsize{12pt}{12pt}\selectfont
+        \vspace{0.5mm}
+        \vfill
+        \hspace{52.5mm}
+            #1: #2
+        \vfill
+        \vspace{0.5mm}
+    }
+}
+
+\newcommand{\judgeitem}[3]{
+    \judgesign{#1}
+    \nointerlineskip
+    \vbox to 0.5mm {
+        \hspace{60.5mm} \hrulefill \hspace{7.8mm}
+        \vfill
+    }
+    \nointerlineskip
+    \judgename{#2}{#3}
+}
+
+% 포맷 시작 
+\vspace{5.9mm}
+\vspace{4.5mm}
+\vbox to 24.4mm {
+\setstretch{1.5}
+\setlength{\parskip}{3.6pt}
+\fontsize{16pt}{16pt}\selectfont
+\vspace{0.5mm}
+\begin{center}
+    This certifies that the Ph.D. Dissertation\\
+    of \studentname{} is approved
+\end{center}
+
+\vfill
+}
+\nointerlineskip
+\vspace{9.7mm}
+\judgeitem{심사위원장}{Committee Chair}{\committeechair}
+\vspace{4.7mm}
+\nointerlineskip
+\judgeitem{심사위원 1}{Committee Member 1}{\committeememberone}
+\nointerlineskip
+\vspace{4.7mm}
+\judgeitem{심사위원 2}{Committee Member 2}{\committeemembertwo}
+\nointerlineskip
+\vspace{4.7mm}
+\judgeitem{심사위원 3}{Committee Member 3}{\committeememberthree}
+\nointerlineskip
+\vspace{4.7mm}
+\judgeitem{지도교수}{Major Advisor}{\advisorname}
+\nointerlineskip
+
+\setstretch{1.5}
+\fontsize{16pt}{16pt}\selectfont
+\setlength{\parskip}{0pt}
+\hfill\break
+\begin{center}
+    The Graduate School\\
+    Sungkyunkwan University\\
+    December 2023
+\end{center}
